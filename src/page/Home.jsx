@@ -367,7 +367,7 @@ export default function App() {
       {/* CTA Button */}
       <div className="flex flex-wrap gap-3">
         
-        <a  href="tel:+917503510583"
+        <a  href="tel:+917503518583"
           className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-800 active:bg-orange-900 text-white px-5 sm:px-8 py-2.5 sm:py-3.5 rounded-xl font-bold shadow-xl transition-all hover:scale-105 active:scale-95 text-sm sm:text-base touch-manipulation"
         >
           <Phone size={15} className="flex-shrink-0" />
