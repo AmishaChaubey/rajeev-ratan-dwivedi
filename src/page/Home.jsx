@@ -328,37 +328,58 @@ export default function App() {
       </nav>
 
       {/* ── HERO ── */}
-      <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img src="/img1.png" alt="Temple" className="w-full h-full object-cover object-center" />
-        </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-20 w-full">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 bg-orange-500/25 border border-orange-400/40 rounded-full px-3 sm:px-4 py-1.5 mb-5 sm:mb-6 backdrop-blur-sm">
-              <span className="text-orange-500 font-bold text-base sm:text-lg leading-none">ॐ</span>
-              <span className="text-orange-500 text-xs sm:text-sm font-medium">Vedic Traditions Since Generations</span>
-            </div>
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-orange-800 leading-tight mb-3 drop-shadow-xl">
-              {t.hero.name}
-            </h1>
-            <div className="flex items-center gap-2 mb-5 sm:mb-6">
-              <div className="h-px w-8 sm:w-12 bg-stone-600" />
-              <p className="text-stone-600 italic text-base sm:text-lg font-medium">{t.hero.subtitle}</p>
-              <div className="h-px w-8 sm:w-12 bg-amber-400" />
-            </div>
-            <p className="text-orange-500 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 max-w-lg">{t.hero.desc}</p>
-            <div className="flex flex-wrap gap-3 mb-8 sm:mb-10">
-          <a
-  href="tel:+919876543210"
-  className="flex items-center gap-2 bg-orange-600 hover:bg-orange-800 text-white px-5 sm:px-8 py-3 sm:py-3.5 rounded-xl font-bold shadow-xl transition-all hover:scale-105 active:scale-95 text-sm sm:text-base"
->
-  <Phone size={16} /> +91 7503510583
-</a>
-            
-            </div>
-          </div>
-        </div>
-      </section>
+    <section id="home" className="relative min-h-[65vh] sm:min-h-screen flex items-center overflow-hidden">
+  {/* Background Image */}
+  <div className="absolute inset-0 z-0">
+    <img
+      src="/img1.png"
+      alt="Temple"
+      className="w-full h-full object-cover object-center"
+    />
+    {/* Overlay for better text readability on small screens */}
+    <div className="absolute inset-0 bg-amber-900/20 sm:hidden" />
+  </div>
+
+  <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-20">
+    <div className="max-w-2xl">
+
+      {/* Badge */}
+      <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-orange-500/25 border border-orange-400/40 rounded-full px-3 sm:px-4 py-1.5 mb-3 sm:mb-6 backdrop-blur-sm">
+        <span className="text-orange-500 font-bold text-sm sm:text-lg leading-none">ॐ</span>
+        <span className="text-orange-500 text-[11px] sm:text-sm font-medium">Vedic Traditions Since Generations</span>
+      </div>
+
+      {/* Heading */}
+      <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-orange-800 leading-tight mb-2 sm:mb-3 drop-shadow-xl">
+        {t.hero.name}
+      </h1>
+
+      {/* Subtitle divider */}
+      <div className="flex items-center gap-2 mb-3 sm:mb-6">
+        <div className="h-px w-6 sm:w-12 bg-stone-600 flex-shrink-0" />
+        <p className="text-stone-600 italic text-sm sm:text-lg font-medium leading-snug">{t.hero.subtitle}</p>
+        <div className="h-px w-6 sm:w-12 bg-amber-400 flex-shrink-0" />
+      </div>
+
+      {/* Description */}
+      <p className="text-orange-500 text-sm sm:text-lg leading-relaxed mb-4 sm:mb-8 max-w-lg">
+        {t.hero.desc}
+      </p>
+
+      {/* CTA Button */}
+      <div className="flex flex-wrap gap-3">
+        
+        <a  href="tel:+917503510583"
+          className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-800 active:bg-orange-900 text-white px-5 sm:px-8 py-2.5 sm:py-3.5 rounded-xl font-bold shadow-xl transition-all hover:scale-105 active:scale-95 text-sm sm:text-base touch-manipulation"
+        >
+          <Phone size={15} className="flex-shrink-0" />
+          <span>+91 7503510583</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* ── ABOUT ── */}
       <section id="about" className="py-12 md:py-16 bg-white">
