@@ -289,16 +289,16 @@ export default function App() {
   const visibleTests = t.testimonials.slice(slideIdx * 3, slideIdx * 3 + 3);
 
   return (
-    <div className="font-serif bg-amber-50 text-stone-800 min-h-screen overflow-x-hidden">
+    <div className=" bg-amber-50 text-stone-800 min-h-screen overflow-x-hidden">
 
       {/* ── NAVBAR ── */}
       <nav className="sticky top-0 z-50 bg-white/96 backdrop-blur-sm shadow-md border-b border-amber-200">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between gap-2 flex-wrap">
           <div className="flex items-center gap-2 flex-shrink-0">
-            <span className="text-2xl sm:text-3xl text-orange-600 font-bold leading-none">ॐ</span>
+            <span className="text-2xl sm:text-3xl text-orange-600 font-bold leading-none font-serif">ॐ</span>
             <div className="hidden sm:block">
-              <p className="text-base sm:text-lg font-bold text-orange-900 leading-tight">Acharya Shri Rajeevanand Ji Maharaj</p>
-              <p className="text-xs text-orange-500">Vedic Pandit • Ghaziabad </p>
+              <p className="text-base sm:text-lg font-bold text-orange-900 leading-tight font-serif">Acharya Shri Rajeevanand Ji Maharaj</p>
+              <p className="text-xs text-orange-500 font-serif">Vedic Pandit • Ghaziabad </p>
             </div>
           </div>
           <div className="hidden lg:flex gap-6 text-base font-medium text-stone-700">
@@ -327,40 +327,40 @@ export default function App() {
 
       {/* ── HERO ── */}
     <section id="home" className="relative min-h-[65vh] sm:min-h-screen flex items-center overflow-hidden">
-  {/* Background Image */}
+ 
   <div className="absolute inset-0 z-0">
     <img
       src="/img1.png"
       alt="Temple"
       className="w-full h-full object-cover object-center"
     />
-    {/* Overlay for better text readability on small screens */}
+  
     <div className="absolute inset-0 bg-amber-900/20 sm:hidden" />
   </div>
 
   <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-20">
     <div className="max-w-2xl">
 
-      {/* Badge */}
+     
       <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-orange-500/25 border border-orange-400/40 rounded-full px-3 sm:px-4 py-1.5 mb-3 sm:mb-6 backdrop-blur-sm">
-        <span className="text-orange-500 font-bold text-sm sm:text-lg leading-none">ॐ</span>
-        <span className="text-orange-500 text-[11px] sm:text-sm font-medium">Vedic Traditions Since Generations</span>
+        <span className="text-orange-500 font-bold text-sm sm:text-lg leading-none font-serif">ॐ</span>
+        <span className="text-orange-500 text-[11px] sm:text-sm font-medium font-serif">Vedic Traditions Since Generations</span>
       </div>
 
       {/* Heading */}
-      <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-orange-800 leading-tight mb-2 sm:mb-3 drop-shadow-xl">
+      <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-orange-800 leading-tight mb-2 sm:mb-3 drop-shadow-xl font-serif">
         {t.hero.name}
       </h1>
 
       {/* Subtitle divider */}
       <div className="flex items-center gap-2 mb-3 sm:mb-6">
         <div className="h-px w-6 sm:w-12 bg-stone-600 flex-shrink-0" />
-        <p className="text-stone-600 italic text-sm sm:text-lg font-medium leading-snug">{t.hero.subtitle}</p>
+        <p className="text-stone-600 italic text-sm sm:text-lg font-medium leading-snug font-serif">{t.hero.subtitle}</p>
         <div className="h-px w-6 sm:w-12 bg-amber-400 flex-shrink-0" />
       </div>
 
       {/* Description */}
-      <p className="text-orange-500 text-sm sm:text-lg leading-relaxed mb-4 sm:mb-8 max-w-lg">
+      <p className="text-orange-500 text-sm sm:text-lg leading-relaxed mb-4 sm:mb-8 max-w-lg font-serif">
         {t.hero.desc}
       </p>
 
@@ -381,7 +381,7 @@ export default function App() {
 
       {/* ── ABOUT ── */}
       <section id="about" className="py-12 md:py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 font-serif">
           <SectionTitle>{t.about.title}</SectionTitle>
           <div className="flex flex-col md:flex-row items-start gap-8 md:gap-10">
             {/* Image */}
@@ -392,21 +392,21 @@ export default function App() {
             </div>
             {/* Content */}
             <div className="flex-1 text-center md:text-left">
-              <p className="font-bold text-orange-800 text-xl sm:text-2xl md:text-3xl block mb-3">
+              <p className="font-bold text-orange-800 text-xl sm:text-2xl md:text-3xl block mb-3 font-serif">
                 Acharya Shri Rajeevanand Ji Maharaj Ji
               </p>
               {/* Intro paragraph */}
-              <p className="text-stone-600 text-sm sm:text-base leading-relaxed mb-5">
+              <p className="text-stone-600 text-sm sm:text-base leading-relaxed mb-5 font-serif">
                 {t.about.intro}
               </p>
               {/* Bullet points with Lucide icons */}
               <ul className="space-y-2.5 mb-5">
                 {t.about.bullets.map((b, i) => (
                   <li key={i} className="flex items-start gap-3 text-left">
-                    <span className="flex-shrink-0 w-7 h-7 bg-orange-100 border border-orange-200 rounded-full flex items-center justify-center mt-0.5">
+                    <span className="flex-shrink-0 w-7 h-7 bg-orange-100 border border-orange-200 rounded-full flex items-center justify-center mt-0.5 font-serif">
                       <LucideIcon name={b.icon} size={14} className="text-orange-600" />
                     </span>
-                    <span className="text-stone-600 text-sm sm:text-base leading-snug">{b.text}</span>
+                    <span className="text-stone-600 text-sm sm:text-base leading-snug font-serif">{b.text}</span>
                   </li>
                 ))}
               </ul>
@@ -432,12 +432,12 @@ export default function App() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-4 sm:mb-5">
             {t.services.items.slice(0,4).map((s,i) => (
               <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-amber-100 group">
-                <div className="h-44 sm:h-52 overflow-hidden">
+                <div className="h-44 sm:h-52 overflow-hidden font-serif">
                   <img src={serviceImages[i]} alt={s.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div className="p-3 sm:p-4">
-                  <h3 className="font-bold text-orange-800 text-sm mb-1">{s.title}</h3>
-                  <p className="text-stone-500 text-xs leading-relaxed">{s.desc}</p>
+                  <h3 className="font-bold text-orange-800 text-sm mb-1 font-serif">{s.title}</h3>
+                  <p className="text-stone-500 text-xs leading-relaxed  font-serif">{s.desc}</p>
                 </div>
               </div>
             ))}
@@ -445,7 +445,7 @@ export default function App() {
           {/* Bottom row */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
             <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-amber-100 group">
-              <div className="h-40 overflow-hidden">
+              <div className="h-40 overflow-hidden font-serif">
                 <img src={serviceImages[4]} alt={t.services.items[4].title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
               </div>
               <div className="p-3 sm:p-4">
@@ -455,7 +455,7 @@ export default function App() {
             </div>
             <div className="md:col-span-2 relative rounded-2xl overflow-hidden shadow-xl min-h-52">
               <img src="/img5.png" alt="stars" className="absolute inset-0 w-full h-full object-cover" />
-              <div className="relative z-10 p-5 sm:p-6 h-full flex flex-col sm:flex-row gap-4">
+              <div className="relative z-10 p-5 sm:p-6 h-full flex flex-col sm:flex-row gap-4 font-serif">
                 <div className="flex-1">
                   <h3 className="font-bold text-amber-700 text-sm sm:text-base md:text-lg mb-3">🔭 {t.services.astroCard.title}</h3>
                   <ul className="space-y-2">
@@ -487,7 +487,7 @@ export default function App() {
       </section>
 
       {/* ── WHY CHOOSE US ── */}
-      <section className="py-12 md:py-16 bg-white relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-white relative overflow-hidden font-serif">
         <div className="absolute bottom-0 right-0 w-64 sm:w-96 h-64 sm:h-96 rounded-full bg-orange-300 opacity-5 translate-x-1/3 translate-y-1/3" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <SectionTitle light>{t.why.title}</SectionTitle>
@@ -498,8 +498,8 @@ export default function App() {
                   <LucideIcon name={item.icon} size={20} className="text-orange-600" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-amber-600 text-sm md:text-base mb-1">{item.title}</h3>
-                  <p className="text-stone-600 text-xs md:text-sm leading-relaxed">{item.desc}</p>
+                  <h3 className="font-bold text-amber-600 text-sm md:text-base mb-1 font-serif">{item.title}</h3>
+                  <p className="text-stone-600 text-xs md:text-sm leading-relaxed font-serif">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -509,7 +509,7 @@ export default function App() {
 
       {/* ── TESTIMONIALS ── */}
       <section className="py-12 md:py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 font-serif">
           <SectionTitle>What Our Devotees Say</SectionTitle>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mb-6 min-h-52">
             {visibleTests.map((tv, i) => (
@@ -545,7 +545,7 @@ export default function App() {
 
       {/* ── CONTACT SECTION ── */}
       <section id="contact" className="py-12 md:py-16 bg-amber-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 font-serif">
           <SectionTitle>{t.contact.title}</SectionTitle>
           <div className="flex flex-col lg:flex-row gap-6 items-stretch">
             {/* Left image panel — fixed compact height */}
@@ -555,9 +555,9 @@ export default function App() {
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="text-2xl text-amber-300">ॐ</span>
-                  <span className="text-white font-bold text-lg">Book Your Pooja</span>
+                  <span className="text-white font-bold text-lg font-serif">Book Your Pooja</span>
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-2 font-sans">
                   {[
                     
                     [Phone, "+91 7503518583"],
@@ -573,7 +573,7 @@ export default function App() {
             </div>
             {/* Right: Form — compact padding */}
             <div className="lg:w-7/12 bg-white rounded-2xl p-4 sm:p-6 shadow-md border border-amber-100 flex flex-col justify-center">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3 font-serif">
                 <input type="text" placeholder={t.contact.name}
                   className="border border-amber-200 rounded-xl px-3 sm:px-4 py-2.5 text-stone-700 focus:outline-none focus:ring-2 focus:ring-orange-300 bg-amber-50 text-sm" />
                 <input type="email" placeholder={t.contact.email}
