@@ -371,7 +371,7 @@ export default function App() {
           className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-800 active:bg-orange-900 text-white px-5 sm:px-8 py-2.5 sm:py-3.5 rounded-xl font-bold shadow-xl transition-all hover:scale-105 active:scale-95 text-sm sm:text-base touch-manipulation"
         >
           <Phone size={15} className="flex-shrink-0" />
-          <span>+91 7503510583</span>
+          <span>+91 7503518583</span>
         </a>
       </div>
 
@@ -560,7 +560,7 @@ export default function App() {
                 <div className="space-y-2">
                   {[
                     
-                    [Phone, "+91 7503510583"],
+                    [Phone, "+91 7503518583"],
                     [MessageCircle, "WhatsApp Available 24/7"]
                   ].map(([Icon, txt], idx) => (
                     <div key={idx} className="flex items-center gap-2 text-orange-100 text-sm">
