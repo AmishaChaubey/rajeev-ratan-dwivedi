@@ -18,7 +18,7 @@ const content = {
     },
 about: {
   title: "About Acharya Ji",
-  intro: "Acharya Shri Rajeevanand Ji Maharaj is a renowned spiritual preacher and Vedic scholar, widely respected for his Shri Ram Katha discourses and deep knowledge of Samast Karm Kand (all Vedic rituals). He is a highly experienced Kundli Visheshagya (astrology expert) with strong command over traditional Vedic scriptures. He holds a Master’s degree (M.A.) in Sanskrit, reflecting his strong academic and spiritual foundation.",
+  intro: "Acharya Shri Rajeevanand Ji Maharaj is a renowned spiritual preacher and Vedic scholar, widely respected for his Shri Ram Katha discourses and deep knowledge of Samast Karm Kand (all Vedic rituals). He is a highly experienced Kundli Visheshagya (astrology expert) with strong command over traditional Vedic scriptures. He holds a Master's degree (M.A.) in Sanskrit, reflecting his strong academic and spiritual foundation.",
   bullets: [
     { icon: "ScrollText", text: "Specialist in Shri Ram Katha & Complete Vedic Karm Kand Rituals" },
     { icon: "Telescope", text: "Expert Kundli Visheshagya — Marriage, Career, Health & Life Guidance" },
@@ -326,58 +326,29 @@ export default function App() {
       </nav>
 
       {/* ── HERO ── */}
-    <section id="home" className="relative min-h-[65vh] sm:min-h-screen flex items-center overflow-hidden">
- 
-  <div className="absolute inset-0 z-0">
-    <img
-      src="/img1.png"
-      alt="Temple"
-      className="w-full h-full object-cover object-center"
-    />
-  
-    <div className="absolute inset-0 bg-amber-900/20 sm:hidden" />
-  </div>
+      <section id="home" className="relative min-h-[65vh] sm:min-h-screen flex items-center overflow-hidden">
 
-  <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-20">
-    <div className="max-w-2xl">
+        <div className="absolute inset-0 z-0">
+          {/* Desktop banner — shown on sm and above */}
+          <img
+            src="/banner.png"
+            alt="Temple"
+            className="hidden sm:block w-full h-full object-contain"
+          />
+          {/* Mobile banner — shown only on small screens */}
+          <img
+            src="/mobile-banner.png"
+            alt="Temple"
+            className="block sm:hidden w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-amber-900/20 sm:hidden" />
+        </div>
 
-     
-      <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-orange-500/25 border border-orange-400/40 rounded-full px-3 sm:px-4 py-1.5 mb-3 sm:mb-6 backdrop-blur-sm">
-        <span className="text-orange-500 font-bold text-sm sm:text-lg leading-none font-serif">ॐ</span>
-        <span className="text-orange-500 text-[11px] sm:text-sm font-medium font-serif">Vedic Traditions Since Generations</span>
-      </div>
-
-      {/* Heading */}
-      <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-orange-800 leading-tight mb-2 sm:mb-3 drop-shadow-xl font-serif">
-        {t.hero.name}
-      </h1>
-
-      {/* Subtitle divider */}
-      <div className="flex items-center gap-2 mb-3 sm:mb-6">
-        <div className="h-px w-6 sm:w-12 bg-stone-600 flex-shrink-0" />
-        <p className="text-stone-600 italic text-sm sm:text-lg font-medium leading-snug font-serif">{t.hero.subtitle}</p>
-        <div className="h-px w-6 sm:w-12 bg-amber-400 flex-shrink-0" />
-      </div>
-
-      {/* Description */}
-      <p className="text-orange-500 text-sm sm:text-lg leading-relaxed mb-4 sm:mb-8 max-w-lg font-serif">
-        {t.hero.desc}
-      </p>
-
-      {/* CTA Button */}
-      <div className="flex flex-wrap gap-3">
-        
-        <a  href="tel:+917503518583"
-          className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-800 active:bg-orange-900 text-white px-5 sm:px-8 py-2.5 sm:py-3.5 rounded-xl font-bold shadow-xl transition-all hover:scale-105 active:scale-95 text-sm sm:text-base touch-manipulation"
-        >
-          <Phone size={15} className="flex-shrink-0" />
-          <span>+91 7503518583</span>
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
+        {/* Hero content (commented out as in original) */}
+        {/* <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-20">
+          ...
+        </div> */}
+      </section>
 
       {/* ── ABOUT ── */}
       <section id="about" className="py-12 md:py-16 bg-white">
@@ -559,7 +530,6 @@ export default function App() {
                 </div>
                 <div className="space-y-2 font-sans">
                   {[
-                    
                     [Phone, "+91 7503518583"],
                     [MessageCircle, "WhatsApp Available 24/7"]
                   ].map(([Icon, txt], idx) => (
